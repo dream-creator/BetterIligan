@@ -35,9 +35,9 @@ const navigation = [
         name: 'Government',
         href: '/government',
         dropdown: [
-            //{ name: 'Government Overview', href: '/government' },
-            //{ name: 'City Officials', href: '/government/officials' },
-            //{ name: 'Departments', href: '/government/departments' },
+            { name: 'Government Overview', href: '/government' },
+            { name: 'National Agencies', href: '/government/directory' },
+            { name: 'Departments', href: '/government/departments' },
         ],
     },
 ];
