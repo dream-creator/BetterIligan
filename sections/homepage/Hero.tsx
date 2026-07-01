@@ -106,11 +106,11 @@ export default function HeroSection() {
 
                 {/* Left Column */}
                 <div className="max-w-404 mx-auto lg:mx-0 text-center lg:text-left">
-                    <h1 className="max-lg:text-left text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-5">
+                    <h1 className="lg:text-left text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-5">
                         Welcome to <br /> BetterIligan City
                     </h1>
 
-                    <p className="max-lg:max-w-lg max-lg:text-left text-blue-100 text-base lg:text-lg mb-8 leading-relaxed">
+                    <p className="lg:max-w-lg lg:text-left text-blue-100 text-base lg:text-lg mb-8 leading-relaxed">
                         A modernized, volunteer-driven portal to access government services, public data, and resources for the people of Iligan.
                     </p>
 
@@ -199,11 +199,15 @@ export default function HeroSection() {
                                             {searchResults.map((service, idx) => (
                                                 <li key={`service-${idx}`}>
                                                     <Link
-                                                        href={service.type === "standard"
-                                                            ? `/services/${service.slug}`
-                                                            : service.type === "internal"
-                                                                ? `/community/${service.slug}`
-                                                                : service.externalUrl}
+                                                        href={
+                                                            service.type === "external"
+                                                                ? service.externalUrl
+                                                                : service.type === "internal" && !service.internalUrl
+                                                                    ? `/community/${service.slug}`
+                                                                    : service.type === "internal" && service.internalUrl
+                                                                        ? service.internalUrl
+                                                                        : `/services/${service.slug}`
+                                                        }
                                                         className="flex items-center justify-between p-3 md:p-4 hover:bg-blue-50 focus:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-inset rounded-lg transition-all group/item"
                                                         onClick={() => setIsDropdownOpen(false)}
                                                     >
