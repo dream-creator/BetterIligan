@@ -78,11 +78,28 @@ const sections: SitemapSection[] = [
     },
 ];
 
+function SitemapLinkItem({ link }: { link: SitemapLink }) {
+    const className = 'text-sm text-slate-600 hover:text-blue-600 transition-colors';
+
+    if (link.external) {
+        return (
+            <a href={link.href} target="_blank" rel="noopener noreferrer" className={className}>
+                {link.label} ↗
+            </a>
+        );
+    }
+
+    return (
+        <Link href={link.href} className={className}>
+            {link.label}
+        </Link>
+    );
+}
+
 export default function SitemapPage() {
     return (
         <main className="min-h-screen bg-slate-50 font-sans pb-24">
-
-            <SubpageNav href='/' text='Go Home' />
+            <SubpageNav href="/" text="Go Home" />
             <SubpageHero>
                 <SubpageHero.Badges>
                     <Link
@@ -114,23 +131,7 @@ export default function SitemapPage() {
                             <ul className="space-y-2">
                                 {section.links.map((link) => (
                                     <li key={link.label}>
-                                        {link.external ? (
-                                            <a
-                                                href={link.href}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-sm text-slate-600 hover:text-blue-600 transition-colors"
-                                            >
-                                                {link.label} ↗
-                                            </a>
-                                        ) : (
-                                            <Link
-                                                href={link.href}
-                                                className="text-sm text-slate-600 hover:text-blue-600 transition-colors"
-                                            >
-                                                {link.label}
-                                            </Link>
-                                        )}
+                                        <SitemapLinkItem link={link} />
                                     </li>
                                 ))}
                             </ul>
