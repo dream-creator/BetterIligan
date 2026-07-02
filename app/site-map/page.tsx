@@ -98,8 +98,7 @@ export default function SitemapPage() {
                 </SubpageHero.Description>
             </SubpageHero>
 
-            <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12 space-y-6">
                     {sections.map((section) => (
                         <div
                             key={section.title}
@@ -111,9 +110,9 @@ export default function SitemapPage() {
                                     {section.title}
                                 </h2>
                             </div>
-                            <ul className="space-y-2">
+                            <div className="flex flex-wrap gap-x-6 gap-y-2">
                                 {section.links.map((link) => (
-                                    <li key={link.label}>
+                                    <span key={link.label}>
                                         {link.external ? (
                                             <a
                                                 href={link.href}
@@ -131,12 +130,11 @@ export default function SitemapPage() {
                                                 {link.label}
                                             </Link>
                                         )}
-                                    </li>
+                                    </span>
                                 ))}
-                            </ul>
+                            </div>
                         </div>
                     ))}
-                </div>
             </div>
         </main>
     );
