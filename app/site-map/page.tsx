@@ -98,11 +98,12 @@ export default function SitemapPage() {
                 </SubpageHero.Description>
             </SubpageHero>
 
-            <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12 space-y-6">
+            <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12">
+                <div className="flex flex-wrap gap-6 justify-center">
                     {sections.map((section) => (
                         <div
                             key={section.title}
-                            className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm"
+                            className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex-1 min-w-[200px] max-w-[300px]"
                         >
                             <div className="flex items-center gap-2 mb-4">
                                 <MapPin className="w-4 h-4 text-blue-600" />
@@ -110,9 +111,9 @@ export default function SitemapPage() {
                                     {section.title}
                                 </h2>
                             </div>
-                            <div className="flex flex-wrap gap-x-6 gap-y-2">
+                            <ul className="space-y-2">
                                 {section.links.map((link) => (
-                                    <span key={link.label}>
+                                    <li key={link.label}>
                                         {link.external ? (
                                             <a
                                                 href={link.href}
@@ -130,11 +131,12 @@ export default function SitemapPage() {
                                                 {link.label}
                                             </Link>
                                         )}
-                                    </span>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     ))}
+                </div>
             </div>
         </main>
     );
