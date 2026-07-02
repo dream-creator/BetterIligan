@@ -98,8 +98,8 @@ export default function SitemapPage() {
                 </SubpageHero.Description>
             </SubpageHero>
 
-            <div className="max-w-[800px] mx-auto px-4 md:px-6 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
                     {sections.map((section) => (
                         <div
                             key={section.title}
