@@ -98,12 +98,12 @@ export default function SitemapPage() {
                 </SubpageHero.Description>
             </SubpageHero>
 
-            <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-12">
-                <div className="flex flex-wrap gap-6 justify-center">
+            <div className="max-w-[800px] mx-auto px-4 md:px-6 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {sections.map((section) => (
                         <div
                             key={section.title}
-                            className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex-1 min-w-[200px] max-w-[300px]"
+                            className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm"
                         >
                             <div className="flex items-center gap-2 mb-4">
                                 <MapPin className="w-4 h-4 text-blue-600" />
