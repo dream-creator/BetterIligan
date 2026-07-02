@@ -37,27 +37,6 @@
         ]
     },
     {
-        "name": "Government",
-        "href": "/government",
-        "dropdown": [
-            {
-                "name": "Government Overview",
-                "description": "Structure, roles, and functions of the local government of Iligan.",
-                "href": "/government"
-            },
-            {
-                "name": "National Agencies",
-                "description": "List of national government offices and agencies operating in Iligan.",
-                "href": "/government/directory"
-            },
-            {
-                "name": "Departments",
-                "description": "Overview of city departments and their services to the public.",
-                "href": "/government/departments"
-            }
-        ]
-    },
-    {
         "name": "Travel",
         "href": "/travel",
         "dropdown": [
@@ -89,8 +68,40 @@
     },
     {
         "name": "Transparency",
-        "href": "#",
-        "dropdown": []
+        "href": "/transparency",
+        "dropdown": [
+            {
+                "name": "Transparency Overview",
+                "description": "Fiscal accountability and governance documents for Iligan City.",
+                "href": "/transparency"
+            },
+            {
+                "name": "Budget & Finances",
+                "description": "See where the city's revenue comes from and where it's spent.",
+                "href": "/transparency/budget"
+            }
+        ]
+    },
+    {
+        "name": "Government",
+        "href": "/government",
+        "dropdown": [
+            {
+                "name": "Government Overview",
+                "description": "Structure, roles, and functions of the local government of Iligan.",
+                "href": "/government"
+            },
+            {
+                "name": "National Agencies",
+                "description": "List of national government offices and agencies operating in Iligan.",
+                "href": "/government/directory"
+            },
+            {
+                "name": "Departments",
+                "description": "Overview of city departments and their services to the public.",
+                "href": "/government/departments"
+            }
+        ]
     },
     {
         "name": "About",
