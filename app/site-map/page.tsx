@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, MapPin } from 'lucide-react';
-import SubpageNav from '@/components/ui/SubpageNav';
+import { serviceCategories } from '@/data/categories';
 import SubpageHero from '@/components/ui/SubpageHero';
 
 export const metadata: Metadata = {
@@ -43,13 +43,10 @@ const sections: SitemapSection[] = [
         title: 'Services',
         links: [
             { label: 'All Services', href: '/services' },
-            { label: 'Business and Trade', href: '/services?category=Business%2C+Trade+and+Investment' },
-            { label: 'Certificates and Vital Records', href: '/services?category=Certificates+and+Vital+Records' },
-            { label: 'Health and Wellness', href: '/services?category=Health+and+Wellness' },
-            { label: 'Animal Welfare', href: '/services?category=Animal+Welfare' },
-            { label: 'Disaster Preparedness', href: '/services?category=Disaster+Preparedness' },
-            { label: 'Infrastructure and Public Works', href: '/services?category=Infrastructure+and+Public+Works' },
-            { label: 'Transport and Driving', href: '/services?category=Transport+and+Driving' },
+            ...serviceCategories.map((category) => ({
+                label: category.name,
+                href: category.href,
+            })),
         ],
     },
     {
@@ -99,7 +96,6 @@ function SitemapLinkItem({ link }: { link: SitemapLink }) {
 export default function SitemapPage() {
     return (
         <main className="min-h-screen bg-slate-50 font-sans pb-24">
-            <SubpageNav href="/" text="Go Home" />
             <SubpageHero>
                 <SubpageHero.Badges>
                     <Link
