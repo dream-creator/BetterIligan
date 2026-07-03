@@ -71,7 +71,7 @@ SubpageHero.Badges = function SubpageHeroBadges({ children, className }: Subpage
 // 3. The Title
 SubpageHero.Title = function SubpageHeroTitle({ children, className }: SubpageHeroProps) {
     return (
-        <h1 className={`text-3xl md:text-5xl font-extrabold tracking-tight mb-4 ${className ? className : 'text-slate-900'}`}>
+        <h1 className={`text-3xl md:text-5xl font-extrabold tracking-tight mb-4 ${className} text-slate-900`}>
             {children}
         </h1>
     );
@@ -80,7 +80,7 @@ SubpageHero.Title = function SubpageHeroTitle({ children, className }: SubpageHe
 // 4. The Description
 SubpageHero.Description = function SubpageHeroDescription({ children, className }: SubpageHeroProps) {
     return (
-        <p className={`text-[13px] sm:text-lg max-w-3xl leading-relaxed ${className ? className : 'text-slate-600'}`}>
+        <p className={`text-[13px] sm:text-lg max-w-3xl leading-relaxed ${className} text-slate-600`}>
             {children}
         </p>
     );
