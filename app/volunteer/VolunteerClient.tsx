@@ -55,19 +55,13 @@ export default function VolunteerClient() {
 
             <SubpageHero>
                 <SubpageHero.Badges>
-                    <Link
-                        href="/about"
-                        className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors"
-                    >
-                        <ArrowLeft className="w-4 h-4" /> Back to About
-                    </Link>
-                    <span className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider rounded-full border border-emerald-100 flex items-center gap-1.5 w-fit">
+                    <span className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider rounded-full border border-emerald-100 flex items-center gap-1.5 w-fit mx-auto">
                         <HeartHandshake className="w-3.5 h-3.5" />
                         Join the Movement
                     </span>
                 </SubpageHero.Badges>
-                <SubpageHero.Title>Volunteer for Iligan</SubpageHero.Title>
-                <SubpageHero.Description>
+                <SubpageHero.Title className='text-center'>Volunteer for Iligan</SubpageHero.Title>
+                <SubpageHero.Description className='mx-auto text-center'>
                     Help us build a more tech-centric, informed, and connected City of Majestic Waterfalls. Everyone has a role to play.
                 </SubpageHero.Description>
             </SubpageHero>

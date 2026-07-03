@@ -121,6 +121,11 @@
                 "name": "Volunteer",
                 "description": "Learn more about this platform and its purpose.",
                 "href": "/volunteer"
+            },
+            {
+                "name": "Contributors",
+                "description": "See who contributed to this community project.",
+                "href": "/contributors"
             }
         ]
     }
