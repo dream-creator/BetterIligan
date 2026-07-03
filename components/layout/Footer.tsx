@@ -134,7 +134,7 @@ export default function Footer({ className }: ClassName) {
                             government website
                         </p>
                         <Link
-                            href="/sitemap"
+                            href="/site-map"
                             className="text-slate-500 hover:text-white text-sm transition-colors"
                         >
                             Sitemap
