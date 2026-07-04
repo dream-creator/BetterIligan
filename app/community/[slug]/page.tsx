@@ -6,6 +6,16 @@ import { safeJsonLd } from '@/lib/utils';
 // Import the Client UI component we just made
 import CommunityClient from './CommunityClient';
 
+export async function generateStaticParams() {
+    const communityProfiles = allServices.filter(
+        (c) => c.type === "internal"
+    );
+
+    return communityProfiles.map((community) => ({
+        slug: community.slug,
+    }));
+}
+
 // 1. DYNAMIC METADATA (Server Side)
 export async function generateMetadata({
     params
