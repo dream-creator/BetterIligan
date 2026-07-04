@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://betteriligancity.org'),
     title: {
         default: 'BetterIligan City',
         template: '%s | BetterIligan City'
@@ -18,14 +19,6 @@ export const metadata: Metadata = {
         description: 'A modernized, volunteer-driven portal to access government services...',
         url: 'https://betteriligancity.org',
         siteName: 'BetterIligan',
-        images: [
-            {
-                url: '/og-banner.jpg', // Points to public/og-banner.jpg
-                width: 1200,
-                height: 630,
-                alt: 'BetterIligan City Preview Banner',
-            },
-        ],
         locale: 'en_PH',
         type: 'website',
     },
@@ -33,7 +26,6 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'BetterIligan City',
         description: 'A modernized, volunteer-driven portal to access government services...',
-        images: ['/og-banner.jpg'],
     },
 };
 
